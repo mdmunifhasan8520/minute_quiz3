@@ -136,6 +136,7 @@
                         <viewLayoutGuide key="safeArea" id="rbU-UC-XL8"/>
                     </view>
                     <connections>
+                        <outlet property="StartLabel" destination="ak5-6R-hPD" id="lnJ-Wm-ci8"/>
                         <outlet property="forGamePlayHighestScoreLabel" destination="fTQ-is-qAD" id="wsq-YT-CmU"/>
                         <outlet property="highestScoreLabel" destination="GUa-84-sTx" id="64e-ma-ZyA"/>
                         <outlet property="nameField" destination="PWu-fW-Pot" id="YYP-2P-T6v"/>
@@ -458,6 +459,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Button1Label" destination="ofY-b0-jcu" id="7V8-0r-z72"/>
                         <outlet property="correctAnswerCountLabel" destination="v9N-ih-pQq" id="n94-lM-QeS"/>
                         <outlet property="progressBar" destination="Ysc-Dr-thi" id="1Rn-pd-2vc"/>
                         <outlet property="progressHud" destination="hwj-ft-CnP" id="lLl-ke-EFn"/>
@@ -481,7 +483,7 @@
         <image name="Diego Maradona_A" width="256" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QQb-Xo-ghi"/>
+        <segue reference="EaI-tN-dhs"/>
         <segue reference="9um-OV-eIi"/>
     </inferredMetricsTieBreakers>
 </document>

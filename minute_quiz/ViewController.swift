@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     var startTimer = Timer()
  
     
+    @IBOutlet weak var Button1Label: UIButton!
     
     //ui elements from the storyboard
     @IBOutlet weak var questionImage: UIImageView!
@@ -82,8 +83,24 @@ class ViewController: UIViewController {
         imageView.startAnimating()
     }
     
+    
+    /*
+    @objc func addPulse() {
+        let pulse = Pulsing(numberOfPulses: 1, radius: 110, position: Button1Label.center)
+        pulse.animationDuration = 0.8
+        pulse.backgroundColor = UIColor.blue.cgColor
+        
+        self.view.layer.insertSublayer(pulse, below: Button1Label.layer)
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.addPulse))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        Button1Label.addGestureRecognizer(tapGestureRecognizer)
+        
+        */
+        
         heartImages = createImageArray(total: 24, imagePrefix: "heart")
     
         bestScore = userDefaults.integer(forKey: "hscore")
