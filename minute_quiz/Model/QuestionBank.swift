@@ -26,6 +26,7 @@ class QuestionBank {
         list.append(Question(id: 5, image: UIImage(named: "Roberto Carlos_A")!, text: "I think ronaldo?", correctAnswer: false,character: "Roberto Carlos"))
         list.append(Question(id: 6, image: UIImage(named: "Garrincha_A")!, text: "I think ronaldo?", correctAnswer: false,character: "Roberto Carlos"))
         list.append(Question(id: 7, image: UIImage(named: "Garrincha_A")!, text: "I think ronaldo?", correctAnswer: false,character: "Roberto Carlos"))
+        list.append(Question(id: 8, image: UIImage(named: "Garrincha_A")!, text: "I think ronaldo?", correctAnswer: false,character: "Roberto Carlos"))
       
    
     }
