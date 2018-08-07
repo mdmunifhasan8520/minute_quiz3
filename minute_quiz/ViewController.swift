@@ -119,13 +119,17 @@ class ViewController: UIViewController {
         //senderValue = 1
         if (sender as AnyObject).tag == 1 {
             pickedAnswer = true
-           //Button1Label.backgroundColor = UIColor.green
             //sender.pulsate()
            senderValue += 1
+            Button1Label.isEnabled = false
+            Button2Label.isEnabled = false
         } else if sender.tag == 2 {
             pickedAnswer = false
            // sender.shake()
             senderValue += 2
+            Button1Label.isEnabled = false
+            Button2Label.isEnabled = false
+            
         }
         checkAnswer()
         
@@ -192,6 +196,9 @@ class ViewController: UIViewController {
         progressLabel.text = "\(questionNumber + 1) / 5"
         progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(questionNumber + 1)
         //senderValue = 1
+        Button1Label.isEnabled = true
+        Button2Label.isEnabled = true
+        
       
     }
     
@@ -231,10 +238,12 @@ class ViewController: UIViewController {
             animate(imageView: progressHud, images: heartImages)
             if senderValue == 1 {
                 Button1Label.backgroundColor = UIColor.green
+                Button1Label.pulsate()
             }
             
            else if senderValue == 2 {
                 Button2Label.backgroundColor = UIColor.green
+                Button2Label.pulsate()
                
             }
             score = score + 1
@@ -244,11 +253,13 @@ class ViewController: UIViewController {
             print("shame")
             if senderValue == 1 {
                 Button1Label.backgroundColor = UIColor.red
+                Button1Label.shake()
               
             }
                 
             else if senderValue == 2 {
                 Button2Label.backgroundColor = UIColor.red
+                Button2Label.shake()
             }
             wrongAnswerCount = wrongAnswerCount + 1
             myWrongAnswerCollecction.append(currentQuestion.id)
