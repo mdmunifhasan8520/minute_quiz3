@@ -10,6 +10,7 @@
 		FA1C747E210D03DF00ED639D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C747D210D03DF00ED639D /* Question.swift */; };
 		FA1C7480210D0D3C00ED639D /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C747F210D0D3C00ED639D /* QuestionBank.swift */; };
 		FA518D75211804ED002F9F09 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA518D74211804ED002F9F09 /* Pulsing.swift */; };
+		FA8970502119DDA800F38A74 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89704F2119DDA800F38A74 /* RoundButton.swift */; };
 		FA89845B210CEC2300AA94AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89845A210CEC2300AA94AF /* AppDelegate.swift */; };
 		FA89845D210CEC2300AA94AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89845C210CEC2300AA94AF /* ViewController.swift */; };
 		FA898460210CEC2300AA94AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA89845E210CEC2300AA94AF /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		FA1C747D210D03DF00ED639D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FA1C747F210D0D3C00ED639D /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		FA518D74211804ED002F9F09 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
+		FA89704F2119DDA800F38A74 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		FA898457210CEC2300AA94AF /* minute_quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minute_quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA89845A210CEC2300AA94AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA89845C210CEC2300AA94AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		FA89846E210CEE1700AA94AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA89704F2119DDA800F38A74 /* RoundButton.swift */,
 				FA89845E210CEC2300AA94AF /* Main.storyboard */,
 				FA898461210CEC2C00AA94AF /* Assets.xcassets */,
 				FA898466210CEC2C00AA94AF /* Info.plist */,
@@ -199,6 +202,7 @@
 				FACA2609210E8DDA0002CF7C /* ArchiveViewController.swift in Sources */,
 				FA518D75211804ED002F9F09 /* Pulsing.swift in Sources */,
 				FA1C7480210D0D3C00ED639D /* QuestionBank.swift in Sources */,
+				FA8970502119DDA800F38A74 /* RoundButton.swift in Sources */,
 				FAE932D821141D8800CA5517 /* ArchiveDetailsViewController.swift in Sources */,
 				FAE932D4211359D300CA5517 /* CollectionViewCell.swift in Sources */,
 				FA89845D210CEC2300AA94AF /* ViewController.swift in Sources */,

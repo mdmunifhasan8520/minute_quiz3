@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak5-6R-hPD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak5-6R-hPD" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                 <rect key="frame" x="111" y="327" width="193" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.074970133602619171" green="0.3151419460773468" blue="0.21133434772491455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -26,12 +26,17 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Start:" destination="jh5-vs-F8m" eventType="touchUpInside" id="9kX-pk-Ua6"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="GamePlaySegueid" id="OeH-hF-SNM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-9b-fTI">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-9b-fTI" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                 <rect key="frame" x="20" y="668" width="115" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.074970133602619171" green="0.3151419460773468" blue="0.21133434772491455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,8 +44,13 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-yI-fnm">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-yI-fnm" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                 <rect key="frame" x="150" y="668" width="115" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.074970133602619171" green="0.3151419460773468" blue="0.21133434772491455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,11 +58,16 @@
                                 <state key="normal">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="LBt-zh-C8r" kind="show" id="EaI-tN-dhs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST6-vV-3MV">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST6-vV-3MV" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                 <rect key="frame" x="279" y="668" width="115" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.074970133602619171" green="0.3151419460773468" blue="0.21133434772491455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,6 +75,11 @@
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Settings:" destination="jh5-vs-F8m" eventType="touchUpInside" id="9jT-JN-hsy"/>
                                     <segue destination="4JN-3f-sfO" kind="show" identifier="settingsSegueID" id="UP3-0i-Zbh"/>
@@ -198,7 +218,7 @@
                                     <outlet property="delegate" destination="LBt-zh-C8r" id="Bbm-SC-FmA"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-Jc-51n">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-Jc-51n" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                 <rect key="frame" x="20" y="641" width="129" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.10553426295518875" green="0.036613680422306061" blue="0.03027883917093277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,6 +226,11 @@
                                 <state key="normal" title="BACK" backgroundImage="Default.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="jh5-vs-F8m" kind="show" id="L4v-IV-NST"/>
                                 </connections>
@@ -284,7 +309,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-Md-SU7">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWg-Md-SU7" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                 <rect key="frame" x="259" y="58" width="135" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -292,11 +317,16 @@
                                 <state key="normal" title="RESET">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="RESET:" destination="4JN-3f-sfO" eventType="touchUpInside" id="Qdp-RP-kcr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWd-s9-gb4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWd-s9-gb4" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                 <rect key="frame" x="20" y="672" width="129" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.105534263" green="0.036613680420000003" blue="0.030278839169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -304,6 +334,11 @@
                                 <state key="normal" title="BACK" backgroundImage="Default.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backToHomeScreen:" destination="uFe-P8-559" eventType="touchUpInside" id="XHS-QQ-oUd"/>
                                     <segue destination="jh5-vs-F8m" kind="show" id="27B-hR-YiO"/>
@@ -370,7 +405,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x/13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEY-yY-deF" userLabel="progress label">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x/13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEY-yY-deF" userLabel="progress label">
                                                         <rect key="frame" x="184" y="20" width="47" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -403,34 +438,29 @@
                                         <rect key="frame" x="0.0" y="400" width="415" height="336"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofY-b0-jcu">
-                                                <rect key="frame" x="43" y="57" width="136" height="81"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.93937546014785767" green="0.37877422571182251" blue="0.13797298073768616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="TRUE">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUK-hq-3CV"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ysc-Dr-thi" userLabel="Progress View">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.18902146816253662" green="0.96019536256790161" blue="0.27912938594818115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAs-TG-0DR">
-                                                <rect key="frame" x="239" y="57" width="136" height="81"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAs-TG-0DR" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
+                                                <rect key="frame" x="236" y="28" width="136" height="81"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.93937546009999995" green="0.37877422570000002" blue="0.1379729807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="FALSE">
                                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TY9-eL-lel"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYk-MT-r2G">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYk-MT-r2G" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="246" width="129" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.10553426295518875" green="0.036613680422306061" blue="0.03027883917093277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -438,6 +468,11 @@
                                                 <state key="normal" title="BACK" backgroundImage="Default.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="Home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sc8-oz-8js"/>
                                                     <segue destination="jh5-vs-F8m" kind="show" id="9um-OV-eIi"/>
@@ -457,6 +492,23 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.24421331286430359" green="0.93288403749465942" blue="0.03786768764257431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofY-b0-jcu" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
+                                                <rect key="frame" x="44" y="28" width="154" height="81"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.93937546014785767" green="0.37877422571182251" blue="0.13797298073768616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="TRUE">
+                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="11"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUK-hq-3CV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -492,7 +544,7 @@
         <image name="Diego Maradona_A" width="256" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2mn-xR-Zyr"/>
-        <segue reference="L4v-IV-NST"/>
+        <segue reference="EaI-tN-dhs"/>
+        <segue reference="27B-hR-YiO"/>
     </inferredMetricsTieBreakers>
 </document>

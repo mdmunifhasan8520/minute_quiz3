@@ -38,6 +38,8 @@ class ViewController: UIViewController {
     //for the Timer
     var startInt = 2
     var startTimer = Timer()
+    
+    var button1Color = UIColor()
  
     
     
@@ -93,7 +95,7 @@ class ViewController: UIViewController {
         homeBestScore = userDefaults.integer(forKey: "hscoreforGamePlay")
         storedCorrentAnswerArr = userDefaults.object(forKey: "scaarr") as? [Int] ?? [Int]()
         storedWrongAnswerArr = userDefaults.object(forKey: "swaarr") as? [Int] ?? [Int]()
-        
+        //button1Color = Button1Label.
         //print("bestScore:\(bestScore)")
         gameStart()
     }
@@ -107,13 +109,16 @@ class ViewController: UIViewController {
     
     }
     
-    @IBAction func answerPressed(_ sender: AnyObject) {
+    @IBAction func answerPressed(_ sender: UIButton) {
+        
         if(isGoingToNext) {return}
         if (sender as AnyObject).tag == 1 {
             pickedAnswer = true
            //Button1Label.backgroundColor = UIColor.green
+            //sender.pulsate()
         } else if sender.tag == 2 {
             pickedAnswer = false
+           // sender.shake()
         }
         checkAnswer()
         
@@ -207,7 +212,6 @@ class ViewController: UIViewController {
         if currentQuestion.answer == pickedAnswer {
             print("you got it")
             animate(imageView: progressHud, images: heartImages)
-            
             score = score + 1
             correctAnswerCount = correctAnswerCount + 1
             myCorrectAnswerCollecction.append(currentQuestion.id)
