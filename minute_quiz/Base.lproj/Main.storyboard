@@ -446,10 +446,10 @@
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAs-TG-0DR" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                                 <rect key="frame" x="236" y="28" width="136" height="81"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.93937546009999995" green="0.37877422570000002" blue="0.1379729807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="FALSE">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -495,10 +495,10 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofY-b0-jcu" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
                                                 <rect key="frame" x="44" y="28" width="154" height="81"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.93937546014785767" green="0.37877422571182251" blue="0.13797298073768616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="TRUE">
-                                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -521,6 +521,7 @@
                     </view>
                     <connections>
                         <outlet property="Button1Label" destination="ofY-b0-jcu" id="7V8-0r-z72"/>
+                        <outlet property="Button2Label" destination="EAs-TG-0DR" id="Riz-cA-Pyu"/>
                         <outlet property="correctAnswerCountLabel" destination="v9N-ih-pQq" id="n94-lM-QeS"/>
                         <outlet property="progressBar" destination="Ysc-Dr-thi" id="1Rn-pd-2vc"/>
                         <outlet property="progressHud" destination="hwj-ft-CnP" id="lLl-ke-EFn"/>
@@ -544,7 +545,7 @@
         <image name="Diego Maradona_A" width="256" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EaI-tN-dhs"/>
-        <segue reference="27B-hR-YiO"/>
+        <segue reference="QQb-Xo-ghi"/>
+        <segue reference="9um-OV-eIi"/>
     </inferredMetricsTieBreakers>
 </document>
