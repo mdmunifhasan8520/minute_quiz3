@@ -16,6 +16,7 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
     var playerName: [String] = []
     var correctAnswerArray: [Int] = []
     var correctQuestion: [Int] = []
+    var shortnoteArray: [String] = []
     //var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -32,6 +33,9 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
             }
             playerImage.append((correctQuestion?.questionImage)!)
             playerName.append((correctQuestion2?.character)!)
+            shortnoteArray.append((correctQuestion?.shortDescription)!)
+            print("hello:\(shortnoteArray)")
+        
         }
 
     }
@@ -57,12 +61,7 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
         //let cell = collectionView.cellForItem(at: indexPath)
         //cell?.backgroundColor = UIColor.red
        // print(playerImage[indexPath.item])
-        
-        print(desVc)
-      
-        
-        
-        
+   
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -75,8 +74,11 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
             print(collectionView)
             let index = collectionView.indexPath(for: sender as! UICollectionViewCell)
             vc?.image = self.playerImage[(index?.item)!]
+            vc?.name = self.playerName[(index?.item)!]
+            vc?.shortnote = self.shortnoteArray[(index?.item)!]
             //self.vc
            // print(sender)
+           // print("this is:\(vc?.shortnote)")
         }
     }
 

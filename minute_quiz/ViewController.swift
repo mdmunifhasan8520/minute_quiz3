@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     var startTimer = Timer()
  
     
-    @IBOutlet weak var Button1Label: UIButton!
+    
     
     //ui elements from the storyboard
     @IBOutlet weak var questionImage: UIImageView!
@@ -52,6 +52,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var correctAnswerCountLabel: UILabel!
     @IBOutlet weak var wrongAnswerCountLabel: UILabel!
     @IBOutlet weak var progressHud: UIImageView!
+    @IBOutlet weak var Button1Label: UIButton!
     
     
     
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
     var heartImages: [UIImage] = []
     
     
-    
+    //for heart animation
     func createImageArray(total: Int, imagePrefix: String) -> [UIImage] {
         var imageArray: [UIImage] = []
         
@@ -82,25 +83,10 @@ class ViewController: UIViewController {
         imageView.animationRepeatCount = 1
         imageView.startAnimating()
     }
-    
-    
-    /*
-    @objc func addPulse() {
-        let pulse = Pulsing(numberOfPulses: 1, radius: 110, position: Button1Label.center)
-        pulse.animationDuration = 0.8
-        pulse.backgroundColor = UIColor.blue.cgColor
-        
-        self.view.layer.insertSublayer(pulse, below: Button1Label.layer)
-    }*/
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.addPulse))
-        tapGestureRecognizer.numberOfTapsRequired = 1
-        Button1Label.addGestureRecognizer(tapGestureRecognizer)
-        
-        */
-        
+        //heart animation
         heartImages = createImageArray(total: 24, imagePrefix: "heart")
     
         bestScore = userDefaults.integer(forKey: "hscore")
@@ -125,6 +111,7 @@ class ViewController: UIViewController {
         if(isGoingToNext) {return}
         if (sender as AnyObject).tag == 1 {
             pickedAnswer = true
+           //Button1Label.backgroundColor = UIColor.green
         } else if sender.tag == 2 {
             pickedAnswer = false
         }
@@ -220,14 +207,18 @@ class ViewController: UIViewController {
         if currentQuestion.answer == pickedAnswer {
             print("you got it")
             animate(imageView: progressHud, images: heartImages)
+            
             score = score + 1
             correctAnswerCount = correctAnswerCount + 1
             myCorrectAnswerCollecction.append(currentQuestion.id)
+            //button.backgroundColor = UIColor.blueColor()
+            //Button1Label.backgroundColor = UIColor.green
   
         } else {
             print("shame")
             wrongAnswerCount = wrongAnswerCount + 1
             myWrongAnswerCollecction.append(currentQuestion.id)
+            //Button1Label.backgroundColor = UIColor.red
         }
     }
     
