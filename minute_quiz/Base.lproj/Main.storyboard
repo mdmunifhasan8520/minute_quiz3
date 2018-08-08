@@ -33,7 +33,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Start:" destination="jh5-vs-F8m" eventType="touchUpInside" id="9kX-pk-Ua6"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="GamePlaySegueid" id="OeH-hF-SNM"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gtj-Ye-VEP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-9b-fTI" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
@@ -383,7 +383,7 @@
                                                         <size key="shadowOffset" width="0.0" height="2"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yty-bw-xY6">
-                                                        <rect key="frame" x="69" y="18" width="42" height="35"/>
+                                                        <rect key="frame" x="67" y="60" width="42" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -397,14 +397,6 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9N-ih-pQq">
-                                                        <rect key="frame" x="8" y="18" width="42" height="35"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.24421331286430359" green="0.93288403749465942" blue="0.03786768764257431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x/13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEY-yY-deF" userLabel="progress label">
                                                         <rect key="frame" x="184" y="20" width="47" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -412,6 +404,22 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9N-ih-pQq">
+                                                        <rect key="frame" x="11" y="60" width="42" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.24421331286430359" green="0.93288403749465942" blue="0.03786768764257431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark-png-17-1-468x450" translatesAutoresizingMaskIntoConstraints="NO" id="KRL-5q-YIN">
+                                                        <rect key="frame" x="8" y="12" width="48" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="png-wrong-cross-png-small-medium-large-600" translatesAutoresizingMaskIntoConstraints="NO" id="c0x-sj-kaG">
+                                                        <rect key="frame" x="67" y="8" width="48" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -428,7 +436,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-ft-CnP">
-                                                <rect key="frame" x="96" y="81" width="68" height="64"/>
+                                                <rect key="frame" x="301" y="93" width="68" height="64"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
@@ -475,7 +483,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="Home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sc8-oz-8js"/>
-                                                    <segue destination="jh5-vs-F8m" kind="show" id="9um-OV-eIi"/>
+                                                    <segue destination="jh5-vs-F8m" kind="show" id="aeO-Lx-TgV"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cg9-Ew-MFx">
@@ -543,9 +551,11 @@
         <image name="Default.png" width="320" height="568"/>
         <image name="Diego Maradona" width="256" height="300"/>
         <image name="Diego Maradona_A" width="256" height="300"/>
+        <image name="checkmark-png-17-1-468x450" width="468" height="450"/>
+        <image name="png-wrong-cross-png-small-medium-large-600" width="600" height="592"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QQb-Xo-ghi"/>
-        <segue reference="9um-OV-eIi"/>
+        <segue reference="aeO-Lx-TgV"/>
     </inferredMetricsTieBreakers>
 </document>

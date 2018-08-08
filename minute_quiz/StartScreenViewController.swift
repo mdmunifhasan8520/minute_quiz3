@@ -30,6 +30,7 @@ class StartScreenViewController: UIViewController {
         UserDefaults.standard.set(nameField.text, forKey: "name")
         //nameField.text = ""
         StartLabel.isUserInteractionEnabled = true
+        //performSegue(withIdentifier: "LevelSegueID", sender: nil)
     }
     
     @IBAction func Settings(_ sender: Any) {
@@ -50,7 +51,16 @@ class StartScreenViewController: UIViewController {
             nameField.text = s
         }
     }
-  
+    
+   override func viewDidAppear(_ animated: Bool) {
+        if let s = UserDefaults.standard.object(forKey: "name") as? String
+        {
+            userNameLabel.text = s
+        }
+    }
+    
+    /* pulse animation
+     
     @objc func addPulse() {
         let pulse = Pulsing(numberOfPulses: 1, radius: 110, position: StartLabel.center)
         pulse.animationDuration = 0.8
@@ -58,13 +68,6 @@ class StartScreenViewController: UIViewController {
         
         self.view.layer.insertSublayer(pulse, below: StartLabel.layer)
     }
-    
-   
-    override func viewDidAppear(_ animated: Bool) {
-        if let s = UserDefaults.standard.object(forKey: "name") as? String
-        {
-            userNameLabel.text = s
-        }
-    }
+ */
 
 }
