@@ -42,8 +42,6 @@ class ViewController: UIViewController {
     //var button1Color = UIColor()
  
     
-    var senderValue = 0
-    
     //ui elements from the storyboard
     @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -65,6 +63,7 @@ class ViewController: UIViewController {
     let userDefaults = UserDefaults.standard
     
     //for animation
+    var senderValue = 0
     var isGoingToNext = false
     var heartImages: [UIImage] = []
     
@@ -91,16 +90,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //heart animation
         heartImages = createImageArray(total: 24, imagePrefix: "heart")
-    
+        
+        //permanent Data storage
         bestScore = userDefaults.integer(forKey: "hscore")
         homeBestScore = userDefaults.integer(forKey: "hscoreforGamePlay")
         storedCorrentAnswerArr = userDefaults.object(forKey: "scaarr") as? [Int] ?? [Int]()
         storedWrongAnswerArr = userDefaults.object(forKey: "swaarr") as? [Int] ?? [Int]()
-        //button1Color = Button1Label.
-        //print("bestScore:\(bestScore)")
+        
+        //display First Question
         gameStart()
     }
 
@@ -110,11 +109,9 @@ class ViewController: UIViewController {
         }*/
         //userDefaults.set("\(imageArray[0])", forKey: "savedImage")
         //UserDefaults.standard.set(use.text, forKey: "name")
-    
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        
         if(isGoingToNext) {return}
         //senderValue = 1
         if (sender as AnyObject).tag == 1 {
@@ -129,24 +126,17 @@ class ViewController: UIViewController {
             senderValue += 2
             Button1Label.isEnabled = false
             Button2Label.isEnabled = false
-            
         }
         checkAnswer()
         
         //after checking the answer proceed to the next question
         isGoingToNext = true
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             self.questionNumber = self.questionNumber + 1
-            
             self.nextQuestion()
-            
             self.isGoingToNext = false
-            
         })
-        
-        
-    }
+}
     
     func gameStart() {
         myCorrectAnswerCollecction.removeAll()
@@ -156,7 +146,7 @@ class ViewController: UIViewController {
         //for start the timer
         timer.text = "\(startInt)"
         startTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startGameTimer), userInfo: nil, repeats: true)
-        //senderValue = 1
+        
         nextQuestion()
 
     }
@@ -167,22 +157,19 @@ class ViewController: UIViewController {
         wrongAnswerCountLabel.text = "\(wrongAnswerCount)"
         scoreLabel.text = "Score: \(score)"
         
-        //print("summary:scor\(score)")
-        //print("summaryBest\(bestScore)")
+        //best score set permanently
         if score > bestScore {
             bestScore = score
             userDefaults.set("\(bestScore)", forKey: "hscore")
         }
-        
         //for correct and wrong answer collection
         let newCorrectAnswers = myCorrectAnswerCollecction.filter { (id) -> Bool in
             return (storedCorrentAnswerArr.index(of: id) == nil) ? true : false
         }
         storedCorrentAnswerArr.append(contentsOf: newCorrectAnswers)
-        //storedCorrentAnswerArr.sorted()
         userDefaults.set(storedCorrentAnswerArr.sorted(), forKey: "scaarr")
-        print("sorted:\(storedCorrentAnswerArr.sorted())")
         
+        //print("sorted:\(storedCorrentAnswerArr.sorted())")
         //print(myCorrectAnswerCollecction)
         //print(newCorrectAnswers)
         //print(storedCorrentAnswerArr)
@@ -195,21 +182,21 @@ class ViewController: UIViewController {
         scoreLabel.text = "Score: \(score)"
         progressLabel.text = "\(questionNumber + 1) / 5"
         progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(questionNumber + 1)
-        //senderValue = 1
+    
+        
         Button1Label.isEnabled = true
         Button2Label.isEnabled = true
-        
-      
     }
     
     func nextQuestion() {
         if questionNumber <= allQuestions.list.count - 1{
             questionImage.image = allQuestions.list[questionNumber].questionImage
             questionLabel.text = allQuestions.list[questionNumber].questionText
-            Button1Label.backgroundColor = UIColor.black
-            Button2Label.backgroundColor = UIColor.black
-            //Button1Label.backgroundColor = UIColor(red: 0.233, green: 0.74, blue: 0.28, alpha: 1.0)
-            //Button2Label.backgroundColor = UIColor(red: 0.233, green: 0.74, blue: 0.28, alpha: 1.0)
+            //Button1Label.backgroundColor = UIColor.black
+            //Button2Label.backgroundColor = UIColor.black
+            Button1Label.backgroundColor = UIColor(red: 0.576, green: 0.153, blue: 0.561, alpha: 1.0)
+            Button2Label.backgroundColor = UIColor(red: 0.576, green: 0.153, blue: 0.561, alpha: 1.0)
+            
             updateUI()
         } else {
             
@@ -234,30 +221,25 @@ class ViewController: UIViewController {
     func checkAnswer() {
         let currentQuestion = allQuestions.list[questionNumber]
         if currentQuestion.answer == pickedAnswer {
-            print("you got it")
+            //print("you got it")
             animate(imageView: progressHud, images: heartImages)
             if senderValue == 1 {
                 Button1Label.backgroundColor = UIColor.green
                 Button1Label.pulsate()
-            }
-            
-           else if senderValue == 2 {
+            } else if senderValue == 2 {
                 Button2Label.backgroundColor = UIColor.green
                 Button2Label.pulsate()
-               
             }
             score = score + 1
             correctAnswerCount = correctAnswerCount + 1
             myCorrectAnswerCollecction.append(currentQuestion.id)
          } else {
-            print("shame")
+            //print("shame")
             if senderValue == 1 {
                 Button1Label.backgroundColor = UIColor.red
                 Button1Label.shake()
               
-            }
-                
-            else if senderValue == 2 {
+            } else if senderValue == 2 {
                 Button2Label.backgroundColor = UIColor.red
                 Button2Label.shake()
             }

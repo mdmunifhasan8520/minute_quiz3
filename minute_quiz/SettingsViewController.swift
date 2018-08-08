@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set(0, forKey: "hscore")
         UserDefaults.standard.set([], forKey: "scaarr")
         
-        print("hello")
+        //print("hello")
     }
 
     @IBAction func backToHomeScreen(_ sender: Any) {

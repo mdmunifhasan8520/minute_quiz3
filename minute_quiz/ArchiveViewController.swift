@@ -34,11 +34,9 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
             playerImage.append((correctQuestion?.questionImage)!)
             playerName.append((correctQuestion2?.character)!)
             shortnoteArray.append((correctQuestion?.shortDescription)!)
-            print("hello:\(shortnoteArray)")
-        
+            //print("hello:\(shortnoteArray)")
         }
-
-    }
+}
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerImage.count
@@ -51,18 +49,15 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.myLabel.text = playerName[indexPath.item]
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-        //let desVc = [UIImage]()
-        //let mainStoryboard: UIStoryboard = UIStoryboard(name:"main", bundle: nil)
-        let desVc = storyboard?.instantiateViewController(withIdentifier: "ArchiveDetailsViewController") as! ArchiveDetailsViewController
-        //desVc.image = playerImage.append((playerImage.index(of: UIImage))
+        
+       let desVc = storyboard?.instantiateViewController(withIdentifier: "ArchiveDetailsViewController") as! ArchiveDetailsViewController
+       
        desVc.image = playerImage[indexPath.item]
-        //let cell = collectionView.cellForItem(at: indexPath)
-        //cell?.backgroundColor = UIColor.red
-       // print(playerImage[indexPath.item])
-   
-    }
+        // print(playerImage[indexPath.item])
+   }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {

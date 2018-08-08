@@ -27,15 +27,15 @@ extension UIButton {
     
     func shake () {
         let shake = CABasicAnimation(keyPath: "position")
-        shake.duration = 0.03
+        shake.duration = 0.02
         shake.repeatCount = 4
         shake.autoreverses = true
         
-        let fromPoint = CGPoint(x: center.x - 3, y: center.y)
+        let fromPoint = CGPoint(x: center.x - 5, y: center.y)
         let fromValue = NSValue(cgPoint: fromPoint)
         
         
-        let toPoint = CGPoint(x: center.x + 3, y: center.y)
+        let toPoint = CGPoint(x: center.x + 5, y: center.y)
         let toValue = NSValue(cgPoint: toPoint)
         
         

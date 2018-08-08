@@ -30,10 +30,6 @@ class StartScreenViewController: UIViewController {
         UserDefaults.standard.set(nameField.text, forKey: "name")
         //nameField.text = ""
         StartLabel.isUserInteractionEnabled = true
-        
-        
-        
-        
     }
     
     @IBAction func Settings(_ sender: Any) {
@@ -41,20 +37,13 @@ class StartScreenViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-      
-        
-       
-        
         //permanent highest score saved section
         let highestScore = userDefaults.integer(forKey: "hscore")
         let forGameplayhighestscore = userDefaults.integer(forKey: "hscoreforGamePlay")
         highestScoreLabel.text = "\(highestScore)"
         forGamePlayHighestScoreLabel.text = "\(forGameplayhighestscore)"
         
-        print("start:\(highestScore)")
-        //collectionImage.image = userDefaults.object(forKey: "image") as? UIImage
-        //let data = userDefaults.object(forKey: "savedImage") as! NSData
-        //collectionImage.image = UIImage(data: data as Data)
+        //print("start:\(highestScore)")
         if let s = UserDefaults.standard.object(forKey: "name") as? String
         {
             userNameLabel.text = s

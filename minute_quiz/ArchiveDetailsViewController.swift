@@ -17,24 +17,19 @@ class ArchiveDetailsViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var shortnoteLabel: UITextView!
     
     
-    
     var avc = ArchiveViewController()
     
     var image = UIImage()
     var shortnote = String()
     var name = String()
     
-    
-   
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
         imgView.image = image
         
-    
         NameLabel.text = name
         shortnoteLabel.text = shortnote
         //print(image)
-        print(name)
+        //print(name)
     }
-
 }
