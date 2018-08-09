@@ -33,7 +33,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Start:" destination="jh5-vs-F8m" eventType="touchUpInside" id="9kX-pk-Ua6"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="gtj-Ye-VEP"/>
+                                    <segue destination="Sae-2b-fCf" kind="show" id="XPh-24-Stp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-9b-fTI" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
@@ -167,6 +167,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2E-Ga-hcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1620.289855072464" y="106.79347826086958"/>
+        </scene>
+        <!--Level View Controller-->
+        <scene sceneID="oyl-C2-oYo">
+            <objects>
+                <viewController id="Sae-2b-fCf" customClass="LevelViewController" customModule="minute_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F8a-Lr-afe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dax-BV-Goc">
+                                <rect key="frame" x="20" y="61" width="374" height="592"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iWV-ra-3tP">
+                                    <size key="itemSize" width="374" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LEVEL_CELL" id="CWF-Ne-zeU" customClass="CollectionViewCell" customModule="minute_quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgW-AW-q4T">
+                                                    <rect key="frame" x="111" y="52" width="190" height="53"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <color key="textColor" red="0.92542862889999999" green="0.9255359769" blue="0.92538046839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.4422743022441864" green="0.36476361751556396" blue="0.16388627886772156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="MyLabelName" destination="FgW-AW-q4T" id="gLM-so-vdo"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="OAb-vP-gbB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sae-2b-fCf" id="t4k-Mu-K9T"/>
+                                    <outlet property="delegate" destination="Sae-2b-fCf" id="ioq-lg-66X"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOf-ji-kZq" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
+                                <rect key="frame" x="28" y="672" width="129" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.105534263" green="0.036613680420000003" blue="0.030278839169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="BACK" backgroundImage="Default.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NYI-6c-WcN"/>
+                                    <segue destination="jh5-vs-F8m" kind="show" id="Aqe-XH-hSp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcc-87-czv" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
+                                <rect key="frame" x="265" y="672" width="129" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.105534263" green="0.036613680420000003" blue="0.030278839169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="NEXT" backgroundImage="Default.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lee-Xr-XEg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uVh-1j-JiG"/>
+                    </view>
+                    <connections>
+                        <outlet property="LevelCollectionView" destination="Dax-BV-Goc" id="7fC-yL-n0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WM2-bb-2o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-817.39130434782612" y="90.489130434782609"/>
         </scene>
         <!--Archive View Controller-->
         <scene sceneID="6eU-Ob-YMm">
@@ -483,7 +577,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="Home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sc8-oz-8js"/>
-                                                    <segue destination="jh5-vs-F8m" kind="show" id="aeO-Lx-TgV"/>
+                                                    <segue destination="Sae-2b-fCf" kind="show" id="k0h-d0-NE6"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cg9-Ew-MFx">
@@ -555,7 +649,9 @@
         <image name="png-wrong-cross-png-small-medium-large-600" width="600" height="592"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="OAb-vP-gbB"/>
         <segue reference="QQb-Xo-ghi"/>
-        <segue reference="aeO-Lx-TgV"/>
+        <segue reference="k0h-d0-NE6"/>
+        <segue reference="Aqe-XH-hSp"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -2,13 +2,14 @@
 //  LevelViewCell.swift
 //  minute_quiz
 //
-//  Created by MacBook Pro on 8/8/18.
+//  Created by MacBook Pro on 8/9/18.
 //  Copyright © 2018 Code Drizzlers. All rights reserved.
 //
 
 import UIKit
 
-class LevelViewCell: UITableViewCell {
+class LevelViewCell: UICollectionViewCell {
     @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var LabelImage: UIImageView!
     
 }

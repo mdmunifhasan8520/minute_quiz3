@@ -10,6 +10,8 @@
 		FA1C747E210D03DF00ED639D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C747D210D03DF00ED639D /* Question.swift */; };
 		FA1C7480210D0D3C00ED639D /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C747F210D0D3C00ED639D /* QuestionBank.swift */; };
 		FA518D75211804ED002F9F09 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA518D74211804ED002F9F09 /* Pulsing.swift */; };
+		FA85DCC3211CB0C100C636EF /* LevelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85DCC2211CB0C100C636EF /* LevelViewCell.swift */; };
+		FA85DCC5211CB1E700C636EF /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85DCC4211CB1E700C636EF /* LevelViewController.swift */; };
 		FA8970502119DDA800F38A74 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89704F2119DDA800F38A74 /* RoundButton.swift */; };
 		FA89845B210CEC2300AA94AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89845A210CEC2300AA94AF /* AppDelegate.swift */; };
 		FA89845D210CEC2300AA94AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89845C210CEC2300AA94AF /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		FA1C747D210D03DF00ED639D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FA1C747F210D0D3C00ED639D /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		FA518D74211804ED002F9F09 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
+		FA85DCC2211CB0C100C636EF /* LevelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewCell.swift; sourceTree = "<group>"; };
+		FA85DCC4211CB1E700C636EF /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		FA89704F2119DDA800F38A74 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		FA898457210CEC2300AA94AF /* minute_quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minute_quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA89845A210CEC2300AA94AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				FAE932D721141D8800CA5517 /* ArchiveDetailsViewController.swift */,
 				FA89845A210CEC2300AA94AF /* AppDelegate.swift */,
 				FA518D74211804ED002F9F09 /* Pulsing.swift */,
+				FA85DCC4211CB1E700C636EF /* LevelViewController.swift */,
+				FA85DCC2211CB0C100C636EF /* LevelViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -201,6 +207,8 @@
 				FA1C747E210D03DF00ED639D /* Question.swift in Sources */,
 				FACA2609210E8DDA0002CF7C /* ArchiveViewController.swift in Sources */,
 				FA518D75211804ED002F9F09 /* Pulsing.swift in Sources */,
+				FA85DCC5211CB1E700C636EF /* LevelViewController.swift in Sources */,
+				FA85DCC3211CB0C100C636EF /* LevelViewCell.swift in Sources */,
 				FA1C7480210D0D3C00ED639D /* QuestionBank.swift in Sources */,
 				FA8970502119DDA800F38A74 /* RoundButton.swift in Sources */,
 				FAE932D821141D8800CA5517 /* ArchiveDetailsViewController.swift in Sources */,
