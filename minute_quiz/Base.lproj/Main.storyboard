@@ -514,6 +514,13 @@
                                                         <rect key="frame" x="67" y="8" width="48" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pe-8t-dlZ">
+                                                        <rect key="frame" x="161" y="51" width="90" height="29"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -624,6 +631,7 @@
                     <connections>
                         <outlet property="Button1Label" destination="ofY-b0-jcu" id="7V8-0r-z72"/>
                         <outlet property="Button2Label" destination="EAs-TG-0DR" id="Riz-cA-Pyu"/>
+                        <outlet property="LevelId" destination="9Pe-8t-dlZ" id="Voc-tw-KwN"/>
                         <outlet property="correctAnswerCountLabel" destination="v9N-ih-pQq" id="n94-lM-QeS"/>
                         <outlet property="progressBar" destination="Ysc-Dr-thi" id="1Rn-pd-2vc"/>
                         <outlet property="progressHud" destination="hwj-ft-CnP" id="lLl-ke-EFn"/>
@@ -649,7 +657,6 @@
         <image name="png-wrong-cross-png-small-medium-large-600" width="600" height="592"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OAb-vP-gbB"/>
         <segue reference="QQb-Xo-ghi"/>
         <segue reference="k0h-d0-NE6"/>
         <segue reference="Aqe-XH-hSp"/>

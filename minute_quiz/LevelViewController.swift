@@ -13,10 +13,17 @@ class LevelViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     @IBOutlet weak var LevelCollectionView: UICollectionView!
     
+   // var QuestionSet = QuestionBank()
+    //var myVc = ViewController()
+    
+    //var questionNumber = 0
+    
     var name = ["Level 1","Level 2","Level 3","Level 4","Level 5"]
+    var myLevelIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // myVc.questionNumber = myLevelIndex
 
         // Do any additional setup after loading the view.
     }
@@ -32,14 +39,28 @@ class LevelViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "LEVEL_CELL", for: indexPath) as! CollectionViewCell
-        //cell.myLabel.text = name[indexPath.item]
-        //cell2.NameLabel.text = name[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LEVEL_CELL", for: indexPath) as! CollectionViewCell
+        cell.MyLabelName.text = name[indexPath.item]
         
-        cell2.MyLabelName.text = name[indexPath.item]
+        return cell
         
-        return cell2
+    }/*
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        myLevelIndex = indexPath.item + 1
+        print("MY lavel:\(myLevelIndex)")
+ 
+    }*/
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         
+        if segue.destination is ViewController
+        {
+            let vc = segue.destination as? ViewController
+            let index = LevelCollectionView.indexPath(for: sender as! UICollectionViewCell)
+            //print("welcome:\(index)")
+            vc?.selectedLevel = ((index?.item)! + 1)
+        }
     }
     
 

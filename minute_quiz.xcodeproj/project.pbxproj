@@ -91,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FACA2604210E46DD0002CF7C /* StartScreenViewController.swift */,
+				FA85DCC4211CB1E700C636EF /* LevelViewController.swift */,
 				FA89845C210CEC2300AA94AF /* ViewController.swift */,
 				FAE932D52113D47B00CA5517 /* SettingsViewController.swift */,
 				FACA2608210E8DDA0002CF7C /* ArchiveViewController.swift */,
@@ -98,7 +99,6 @@
 				FAE932D721141D8800CA5517 /* ArchiveDetailsViewController.swift */,
 				FA89845A210CEC2300AA94AF /* AppDelegate.swift */,
 				FA518D74211804ED002F9F09 /* Pulsing.swift */,
-				FA85DCC4211CB1E700C636EF /* LevelViewController.swift */,
 				FA85DCC2211CB0C100C636EF /* LevelViewCell.swift */,
 			);
 			name = Controller;

@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     //create a QuestioBank object
     let allQuestions = QuestionBank()
     
+    //let level = LevelViewController()
+    
     //create a variable
     var pickedAnswer : Bool = false
     var questionNumber : Int = 0
@@ -55,8 +57,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var Button1Label: UIButton!
     @IBOutlet weak var Button2Label: UIButton!
     
+    @IBOutlet weak var LevelId: UILabel!
     
     
+    var levelName: Int = 0
+    var level1Arr: [Int] = []
+    var level2Arr: [Int] = []
+    var level: Int = 0
     
     
     //create instance of UserDefaults
@@ -66,6 +73,12 @@ class ViewController: UIViewController {
     var senderValue = 0
     var isGoingToNext = false
     var heartImages: [UIImage] = []
+    
+    var selectedLevel: Int = 1
+    var levelQuestions: [Question] = []
+    
+    
+    //var levelQuestionArr = [QuestionBank]()
     
     
     //for heart animation
@@ -90,6 +103,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //levelIddArr = allQuestions.list.filter({$0 > l)
+        //levelName = level.myLevelIndex
+        
+        print("this is gameplay")
+        levelQuestions = allQuestions.list.filter { (q) -> Bool in
+            q.levelId == self.selectedLevel
+        };
+        
+        
         //heart animation
         heartImages = createImageArray(total: 24, imagePrefix: "heart")
         
@@ -141,7 +164,13 @@ class ViewController: UIViewController {
     func gameStart() {
         myCorrectAnswerCollecction.removeAll()
         myWrongAnswerCollecction.removeAll()
-        allQuestions.list.sort { (a, b) -> Bool in (arc4random() % 6) > 3}
+//        allQuestions.list.sort { (a, b) -> Bool in (arc4random() % 6) > 3}
+        levelQuestions.sort { (a, b) -> Bool in (arc4random() % 6) > 3}
+        
+         //let sortedFriends = friends.sorted(by: { $0.age > $1.age })
+       // levelIddArr = allQuestions.list.sorted(by: { $0.levelId > $1.levelId })
+       
+        
         
         //for start the timer
         timer.text = "\(startInt)"
@@ -189,13 +218,19 @@ class ViewController: UIViewController {
     }
     
     func nextQuestion() {
-        if questionNumber <= allQuestions.list.count - 1{
-            questionImage.image = allQuestions.list[questionNumber].questionImage
-            questionLabel.text = allQuestions.list[questionNumber].questionText
-            //Button1Label.backgroundColor = UIColor.black
-            //Button2Label.backgroundColor = UIColor.black
+   
+        print(selectedLevel)
+        print(questionNumber)
+        print(levelQuestions)
+        if questionNumber <= levelQuestions.count - 1 {
+            questionImage.image = levelQuestions[questionNumber].questionImage
+            questionLabel.text = levelQuestions[questionNumber].questionText
+         
+            
             Button1Label.backgroundColor = UIColor(red: 0.576, green: 0.153, blue: 0.561, alpha: 1.0)
             Button2Label.backgroundColor = UIColor(red: 0.576, green: 0.153, blue: 0.561, alpha: 1.0)
+           
+            //print("after condition:\(level1)")
             
             updateUI()
         } else {

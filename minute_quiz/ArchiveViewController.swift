@@ -49,7 +49,7 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.myLabel.text = playerName[indexPath.item]
         return cell
     }
-    
+    /*
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
         
@@ -57,7 +57,7 @@ class ArchiveViewController: UIViewController, UICollectionViewDataSource, UICol
        
        desVc.image = playerImage[indexPath.item]
         // print(playerImage[indexPath.item])
-   }
+   }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
