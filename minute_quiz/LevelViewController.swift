@@ -39,17 +39,26 @@ class LevelViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LEVEL_CELL", for: indexPath) as! CollectionViewCell
-        cell.MyLabelName.text = name[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LEVEL_CELL", for: indexPath) as! LevelViewCell
+        //cell.MyLabelName.text = name[indexPath.item]
+        cell.NameLabel.text = name[indexPath.item]
         
+      
         return cell
         
-    }/*
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         myLevelIndex = indexPath.item + 1
         print("MY lavel:\(myLevelIndex)")
+        
+        if myLevelIndex == 2 {
+            print("this is two")
+            //self.isAccessibilityElement = true
+            //collectionView.cellForItem(at: indexPath)?.
+            
+        }
  
-    }*/
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {

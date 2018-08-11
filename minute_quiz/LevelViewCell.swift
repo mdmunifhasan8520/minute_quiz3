@@ -9,7 +9,7 @@
 import UIKit
 
 class LevelViewCell: UICollectionViewCell {
-    @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var LabelImage: UIImageView!
     
+    @IBOutlet weak var NameLabel: UILabel!
 }

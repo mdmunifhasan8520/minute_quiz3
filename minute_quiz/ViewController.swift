@@ -35,7 +35,6 @@ class ViewController: UIViewController {
     var storedCorrentAnswerArr = [Int]()
     var storedWrongAnswerArr = [Int]()
     
-    //@IBOutlet weak var highestScoreLabel: UILabel!
     
     //for the Timer
     var startInt = 20
@@ -56,14 +55,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressHud: UIImageView!
     @IBOutlet weak var Button1Label: UIButton!
     @IBOutlet weak var Button2Label: UIButton!
-    
     @IBOutlet weak var LevelId: UILabel!
     
-    
-    var levelName: Int = 0
-    var level1Arr: [Int] = []
-    var level2Arr: [Int] = []
-    var level: Int = 0
+   
     
     
     //create instance of UserDefaults
@@ -74,7 +68,7 @@ class ViewController: UIViewController {
     var isGoingToNext = false
     var heartImages: [UIImage] = []
     
-    var selectedLevel: Int = 1
+    var selectedLevel: Int = 0
     var levelQuestions: [Question] = []
     
     
@@ -103,10 +97,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //levelIddArr = allQuestions.list.filter({$0 > l)
-        //levelName = level.myLevelIndex
-        
         print("this is gameplay")
         levelQuestions = allQuestions.list.filter { (q) -> Bool in
             q.levelId == self.selectedLevel
@@ -166,11 +156,6 @@ class ViewController: UIViewController {
         myWrongAnswerCollecction.removeAll()
 //        allQuestions.list.sort { (a, b) -> Bool in (arc4random() % 6) > 3}
         levelQuestions.sort { (a, b) -> Bool in (arc4random() % 6) > 3}
-        
-         //let sortedFriends = friends.sorted(by: { $0.age > $1.age })
-       // levelIddArr = allQuestions.list.sorted(by: { $0.levelId > $1.levelId })
-       
-        
         
         //for start the timer
         timer.text = "\(startInt)"
@@ -254,7 +239,8 @@ class ViewController: UIViewController {
     }
     
     func checkAnswer() {
-        let currentQuestion = allQuestions.list[questionNumber]
+        let currentQuestion = levelQuestions[questionNumber]
+        //let currentQuestion = allQuestions.list[levelQuestions]
         if currentQuestion.answer == pickedAnswer {
             //print("you got it")
             animate(imageView: progressHud, images: heartImages)

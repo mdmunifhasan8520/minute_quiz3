@@ -187,7 +187,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LEVEL_CELL" id="CWF-Ne-zeU" customClass="CollectionViewCell" customModule="minute_quiz" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LEVEL_CELL" id="CWF-Ne-zeU" customClass="LevelViewCell" customModule="minute_quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -205,7 +205,7 @@
                                         </view>
                                         <color key="backgroundColor" red="0.4422743022441864" green="0.36476361751556396" blue="0.16388627886772156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="MyLabelName" destination="FgW-AW-q4T" id="gLM-so-vdo"/>
+                                            <outlet property="NameLabel" destination="FgW-AW-q4T" id="KaW-2U-BmY"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="OAb-vP-gbB"/>
                                         </connections>
                                     </collectionViewCell>
@@ -231,23 +231,6 @@
                                 <connections>
                                     <action selector="Home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NYI-6c-WcN"/>
                                     <segue destination="jh5-vs-F8m" kind="show" id="Aqe-XH-hSp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcc-87-czv" customClass="RoundButton" customModule="minute_quiz" customModuleProvider="target">
-                                <rect key="frame" x="265" y="672" width="129" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.105534263" green="0.036613680420000003" blue="0.030278839169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="NEXT" backgroundImage="Default.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="Home:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lee-Xr-XEg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -657,6 +640,7 @@
         <image name="png-wrong-cross-png-small-medium-large-600" width="600" height="592"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="OAb-vP-gbB"/>
         <segue reference="QQb-Xo-ghi"/>
         <segue reference="k0h-d0-NE6"/>
         <segue reference="Aqe-XH-hSp"/>
