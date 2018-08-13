@@ -187,7 +187,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LEVEL_CELL" id="CWF-Ne-zeU" customClass="LevelViewCell" customModule="minute_quiz" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="LEVEL_CELL" id="CWF-Ne-zeU" customClass="LevelViewCell" customModule="minute_quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -206,7 +206,7 @@
                                         <color key="backgroundColor" red="0.4422743022441864" green="0.36476361751556396" blue="0.16388627886772156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="NameLabel" destination="FgW-AW-q4T" id="KaW-2U-BmY"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="OAb-vP-gbB"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="LEVEL_SEGUE" id="kfT-ga-82j"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -614,7 +614,7 @@
                     <connections>
                         <outlet property="Button1Label" destination="ofY-b0-jcu" id="7V8-0r-z72"/>
                         <outlet property="Button2Label" destination="EAs-TG-0DR" id="Riz-cA-Pyu"/>
-                        <outlet property="LevelId" destination="9Pe-8t-dlZ" id="Voc-tw-KwN"/>
+                        <outlet property="LevelName" destination="9Pe-8t-dlZ" id="g0V-ls-Si5"/>
                         <outlet property="correctAnswerCountLabel" destination="v9N-ih-pQq" id="n94-lM-QeS"/>
                         <outlet property="progressBar" destination="Ysc-Dr-thi" id="1Rn-pd-2vc"/>
                         <outlet property="progressHud" destination="hwj-ft-CnP" id="lLl-ke-EFn"/>
@@ -640,7 +640,6 @@
         <image name="png-wrong-cross-png-small-medium-large-600" width="600" height="592"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OAb-vP-gbB"/>
         <segue reference="QQb-Xo-ghi"/>
         <segue reference="k0h-d0-NE6"/>
         <segue reference="Aqe-XH-hSp"/>

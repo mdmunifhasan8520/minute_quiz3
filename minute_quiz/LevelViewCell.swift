@@ -12,4 +12,8 @@ class LevelViewCell: UICollectionViewCell {
     @IBOutlet weak var LabelImage: UIImageView!
     
     @IBOutlet weak var NameLabel: UILabel!
+
 }
+
+
+

@@ -17,15 +17,24 @@ class LevelViewController: UIViewController, UICollectionViewDataSource, UIColle
     //var myVc = ViewController()
     
     //var questionNumber = 0
+    var segueShouldOccur = true
     
     var name = ["Level 1","Level 2","Level 3","Level 4","Level 5"]
     var myLevelIndex = 0
+    var mycellValue: [String] = []
     
+    var vc = ViewController()
+    
+    //var levelUpCounter: Int = 0
+    var levelUp: Int = 0
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-       // myVc.questionNumber = myLevelIndex
-
-        // Do any additional setup after loading the view.
+      
+        //levelUp = vc.levelUpCounter
+        levelUp = UserDefaults.standard.integer(forKey: "levelUpVariabel")
+        print("lllup")
+        print(levelUp)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,34 +52,61 @@ class LevelViewController: UIViewController, UICollectionViewDataSource, UIColle
         //cell.MyLabelName.text = name[indexPath.item]
         cell.NameLabel.text = name[indexPath.item]
         
+        cell.isUserInteractionEnabled = true
+       
       
+        print("thid id \(myLevelIndex)")
         return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         myLevelIndex = indexPath.item + 1
-        print("MY lavel:\(myLevelIndex)")
-        
-        if myLevelIndex == 2 {
-            print("this is two")
-            //self.isAccessibilityElement = true
-            //collectionView.cellForItem(at: indexPath)?.
-            
-        }
- 
+        print("3rd\(myLevelIndex)")
+  
+        let cell = collectionView.cellForItem(at: indexPath) as! LevelViewCell
+       
+             cell.backgroundColor = UIColor.blue
+             //cell.isUserInteractionEnabled = false
+
     }
-    
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        
+        print("prepare")
+        //shouldPerformSegueWithIdentifier(identifier: "LEVEL_SEGUE", sender: (Any).self as AnyObject)
         if segue.destination is ViewController
         {
+            
             let vc = segue.destination as? ViewController
             let index = LevelCollectionView.indexPath(for: sender as! UICollectionViewCell)
             //print("welcome:\(index)")
             vc?.selectedLevel = ((index?.item)! + 1)
+        
+            myLevelIndex = (vc?.selectedLevel)!
+            //shouldPerformSegueWithIdentifier(identifier: "LEVEL_SEGUE", sender: (Any).self as AnyObject)
+            print("hi hi hi\(myLevelIndex)")
         }
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        print("2nd prepare")
+        if identifier == "LEVEL_SEGUE" {
+            let index = LevelCollectionView.indexPath(for: sender as! UICollectionViewCell)
+            // perform your computation to determine whether segue should occur
+           // print("here is \(index?.item)")
+            if (index?.item)! > levelUp {
+                print("now \(vc.levelUpCounter)")
+                print("nowup \(levelUp)")
+                return false // you determine this
+              
+            }
+           
+        }
+        // by default perform the segue transitio
+        return true
+    }
+    
+    
+
     
 
   

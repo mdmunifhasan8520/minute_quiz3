@@ -41,6 +41,8 @@ class ViewController: UIViewController {
     var startTimer = Timer()
     
     //var button1Color = UIColor()
+    
+    var levelUpCounter: Int = 0
  
     
     //ui elements from the storyboard
@@ -55,7 +57,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressHud: UIImageView!
     @IBOutlet weak var Button1Label: UIButton!
     @IBOutlet weak var Button2Label: UIButton!
-    @IBOutlet weak var LevelId: UILabel!
+    @IBOutlet weak var LevelName: UILabel!
+    
     
    
     
@@ -122,6 +125,9 @@ class ViewController: UIViewController {
         }*/
         //userDefaults.set("\(imageArray[0])", forKey: "savedImage")
         //UserDefaults.standard.set(use.text, forKey: "name")
+        print("back to level screen")
+       userDefaults.set(levelUpCounter, forKey: "levelUpVariabel")
+        print("now level up counter\(levelUpCounter)")
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {
@@ -182,6 +188,8 @@ class ViewController: UIViewController {
         }
         storedCorrentAnswerArr.append(contentsOf: newCorrectAnswers)
         userDefaults.set(storedCorrentAnswerArr.sorted(), forKey: "scaarr")
+        //userDefaults.set(Any?, forKey: "levelUpVariabel")
+        //userDefaults.set(levelUpCounter, forKey: "levelUpVariabel")
         
         //print("sorted:\(storedCorrentAnswerArr.sorted())")
         //print(myCorrectAnswerCollecction)
@@ -224,6 +232,14 @@ class ViewController: UIViewController {
             
             startTimer.invalidate()
             
+            // user have successfuly complted game, increment user level
+            levelUpCounter += 1
+            
+            
+            print("here is:\(levelUpCounter)")
+            //userDefaults.set(levelUpCounter, forKey: "levelUpVariabel")
+            
+            print("new value:\(levelUpCounter)")
             //create an AlertViewController object
             let alert = UIAlertController(title: "Awesome", message: "You have finished the quiz", preferredStyle: .alert)
             

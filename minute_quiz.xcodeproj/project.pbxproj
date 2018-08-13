@@ -19,6 +19,7 @@
 		FA898462210CEC2C00AA94AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA898461210CEC2C00AA94AF /* Assets.xcassets */; };
 		FA898465210CEC2C00AA94AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA898463210CEC2C00AA94AF /* LaunchScreen.storyboard */; };
 		FA898471210CEE7000AA94AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA898470210CEE7000AA94AF /* Default-568h@2x.png */; };
+		FAADE4F0211F9D7700B142A3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADE4EF211F9D7700B142A3 /* CollectionViewController.swift */; };
 		FACA2605210E46DD0002CF7C /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA2604210E46DD0002CF7C /* StartScreenViewController.swift */; };
 		FACA2609210E8DDA0002CF7C /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA2608210E8DDA0002CF7C /* ArchiveViewController.swift */; };
 		FAE932D4211359D300CA5517 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE932D3211359D300CA5517 /* CollectionViewCell.swift */; };
@@ -41,6 +42,7 @@
 		FA898464210CEC2C00AA94AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA898466210CEC2C00AA94AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA898470210CEE7000AA94AF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FAADE4EF211F9D7700B142A3 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		FACA2604210E46DD0002CF7C /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		FACA2608210E8DDA0002CF7C /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		FAE932D3211359D300CA5517 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				FA89845A210CEC2300AA94AF /* AppDelegate.swift */,
 				FA518D74211804ED002F9F09 /* Pulsing.swift */,
 				FA85DCC2211CB0C100C636EF /* LevelViewCell.swift */,
+				FAADE4EF211F9D7700B142A3 /* CollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				FACA2609210E8DDA0002CF7C /* ArchiveViewController.swift in Sources */,
 				FA518D75211804ED002F9F09 /* Pulsing.swift in Sources */,
 				FA85DCC5211CB1E700C636EF /* LevelViewController.swift in Sources */,
+				FAADE4F0211F9D7700B142A3 /* CollectionViewController.swift in Sources */,
 				FA85DCC3211CB0C100C636EF /* LevelViewCell.swift in Sources */,
 				FA1C7480210D0D3C00ED639D /* QuestionBank.swift in Sources */,
 				FA8970502119DDA800F38A74 /* RoundButton.swift in Sources */,
